@@ -1,7 +1,6 @@
 class Artist < ActiveRecord::Base
   has_many :songs
   has_many :genres, through: :songs
-  attr_accessor :songs, :genres
 
   def get_genre_of_first_song
     self.songs.first.genre
