@@ -17,6 +17,6 @@ class Song < ActiveRecord::Base
       drake = Artist.where(name: "Drake")
     end
     self.artist = Artist.where(name: "Drake")
-    drake.songs << self
+    Artist.where(name: "Drake").songs << self
     end
 end
